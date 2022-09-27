@@ -1,3 +1,7 @@
 <a [routerLink]="['']">Voltar</a>
 
-<h1>{{recommendation.title}}</h1>
+<strong class="d-block" *ngIf="loading">Carregando...</strong>
+
+<div *ngIf="!loading">
+  <h1>{{recommendation.title}}</h1>
+</div>
