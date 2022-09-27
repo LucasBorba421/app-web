@@ -7,25 +7,20 @@
   font-family: ARial;
 }
 
-.recommendation> p {
+.card-body > p {
   display: none;
 }
-.recommendation:hover > p {
+.card-body:hover > p {
   display: block;
+}
+
+.card-body > a {
+  color: black;
+  text-decoration: none;
 }
 
 span.badge {
   padding: 8px;
   color: #000;
   background-color: #bada55;
-}
-
-.like {
-  float: right;
-  background-color: #bada55;
-  border: none;
-}
-
-.like:active {
-  background-color: #859b3d;
 }
