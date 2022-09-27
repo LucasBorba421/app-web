@@ -1,5 +1,7 @@
 <div class="recommendation">
-  <h2>{{recommendation.title}}</h2>
+  <a [routerLink]="['details']">
+    <h2>{{recommendation.title}}</h2>
+  </a>
   <p>{{recommendation.description}}</p>
    <span class="badge">{{recommendation.kind}}</span>
   <button class="like">Curtir</button>
