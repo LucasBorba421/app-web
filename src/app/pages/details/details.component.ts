@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { RecommendationModel } from './../../models/recommendation.model';
+
 
 @Component({
   selector: 'app-details',
-  template: './details.component.html',
+  templateUrl: './details.component.html',
 })
 export class DetailsComponent {
+  constructor( private route: ActivatedRoute ) {}
 
-}
+  }
