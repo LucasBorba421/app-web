@@ -15,7 +15,7 @@ import { RecommendationItemComponent } from './components/recommendation-item/re
     AppComponent, 
     HomeComponent,
     DetailsComponent, 
-    RecommendationItemComponent
+    RecommendationItemComponent,
   ],
   imports: [
     BrowserModule,
