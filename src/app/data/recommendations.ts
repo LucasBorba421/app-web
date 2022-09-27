@@ -4,6 +4,7 @@ export const dataset = [
     title: 'Breaking Bad',
     kind: 'Série',
     description: 'Melhor série já criada na vida',
+    imageUrl: 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/30erzlzIOtOK3k3T3BAl1GiVMP1.jpg',
   },
   {
     id: 2,
