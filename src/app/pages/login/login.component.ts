@@ -12,9 +12,5 @@ export class LoginComponent {
     localStorage.setItem('email', 'lucasdasilvaborba@gmail.com')
     this.router.navigateByUrl('')
   }
-
-  public logout(): void {
-    localStorage.clear()
-    this.router.navigateByUrl('/login')
-  }
+  
   }
