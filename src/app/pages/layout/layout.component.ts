@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent {
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private authService: AuthService){}
 
   public logout(): void {
     this.authService.logout()
