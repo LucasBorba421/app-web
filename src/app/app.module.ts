@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { FormComponent } from './pages/forms/form.component';
 
 import { RecommendationItemComponent } from './components/recommendation-item/recommendation-item.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -20,6 +21,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
     DetailsComponent, 
     RecommendationItemComponent,
     LoginComponent,
+    FormComponent,
     LayoutComponent,
   ],
   imports: [
