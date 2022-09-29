@@ -1,3 +1,12 @@
+body {
+  background-color: black;
+}
+
 h1 {
+  color: #F57F1D;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.kinds {
+  background-color: #2CBFB1;
 }

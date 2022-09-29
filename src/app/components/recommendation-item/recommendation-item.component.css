@@ -1,10 +1,7 @@
-.recommendation {
-  /*width: 600px;*/
-  padding: 1em;
-  margin-bottom: 1em;
-  border: solid 1px #cccccc;
-  border-radius: 8px;
-  font-family: ARial;
+.card-body {
+  border-radius: 0 0 3px 3px ;
+  background-color: white;
+  font-family: Arial;
 }
 
 .card-body > p {
@@ -22,5 +19,5 @@
 span.badge {
   padding: 8px;
   color: #000;
-  background-color: #bada55;
+  background-color: #2CBFB1;
 }
