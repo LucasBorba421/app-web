@@ -8,8 +8,9 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
   constructor(private authService: AuthService){}
 
+public email: string = '';
+
   public login(): void {
-    this.authService.login('lucasdasilvaborba@gmail.com')
+    this.authService.login(this.email)
   }
-  
   }

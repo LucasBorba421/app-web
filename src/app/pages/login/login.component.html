@@ -1,5 +1,16 @@
-<h1>Login</h1>
-<a [routerLink]="['']">Ir para Home</a>
-<hr>
+<div>
+  <div>
+    <div>
+      <div>
+      <h1>Login</h1>
+      <hr>
+      
+        <div>
+          <input type="email" [(ngModel)]="email" class="form-control" placeholder="Digite seu email">
+        </div>
 
-<button (click)="login()" class="btn btn-info">Login</button>
+      <button (click)="login()" class="btn btn-info">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
