@@ -1,6 +1,9 @@
 <header>
-<h1>Recomendações</h1>
-<a [routerLink]="['formulario']">Adicionar uma recomendação</a>
+  <div>
+    <h1>Recomendações</h1>
+    <span class="text-secondary">Usuário Logado: {{currentUser}}</span>
+  </div>
+  <a role="button"  [routerLink]="['formulario']">Adicionar uma recomendação</a>
 </header>
 <hr>
 

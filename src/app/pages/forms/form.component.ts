@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RecommendationModel } from '../../models/recommendation.model';
+import { dataset } from '../../data/recommendations';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +8,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
 })
-export class FormComponent {
+export class FormComponent implements OnInit{
+  public recommendations: RecommendationModel[] = dataset;
+
+  public kinds: string[] = []
+
+  ngOnInit(): void {
+    dataset.forEach((item) => {
+      if (!this.kinds.includes(item.kind)){
+        this.kinds.push(item.kind);
+      }
+    })
+  }
+
   public form: FormGroup = new FormGroup({
     title: new FormControl('', [Validators.required]),
     kind: new FormControl('', [Validators.required]),

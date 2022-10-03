@@ -1,8 +1,8 @@
 #formulario {
   width: 400px;
-  height: 390px;
+  height: 420px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   border: solid 2px #F57F1D;
   border-radius: 5px;
   background-color: white;
@@ -15,7 +15,7 @@
 }
 
 .conteudo {
-  margin-top: 10px;
+  margin-top: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,7 +38,22 @@ h3 {
 }
 
 input {
+  margin-top: 10px;
   display: block;
+  width: 250px;
+  border: solid 1px  #2CBFB1;
+  border-radius: 10px;
+}
+
+select#category {
+  width: 250px;
+  border: solid 1px  #2CBFB1;
+  border-radius: 10px;
+}
+
+
+textarea#description{
+  margin-bottom: 10px;
   width: 250px;
   border: solid 1px  #2CBFB1;
   border-radius: 10px;

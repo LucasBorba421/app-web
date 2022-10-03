@@ -7,12 +7,14 @@
       <form [formGroup]="form">
       <h3>Nome</h3>
       <input type="text" formControlName="title" placeholder="Nome">
-      <h3>Tipo</h3>
-      <input type="text" formControlName="kind" placeholder="Tipo">
-      <h3>Descrição</h3>
-      <input type="text" formControlName="description" placeholder="Descrição">
-      <h3>Imagem Url</h3>
-      <input type="text" formControlName="imageUrl"  placeholder="Imagem Url">
+      <h3>Link da Imagem</h3>
+      <input type="text" formControlName="imageUrl"  placeholder="Link da Imagem">
+      <h3>Categoria</h3>
+        <select id="category" formControlName="kind" type="text" class="form-control">
+          <option value="{{kind}}" *ngFor="let kind of kinds">{{kind}}</option>
+        </select>
+        <h3>Descrição</h3>
+      <textarea id="description" formControlName="description" placeholder="Faça uma descrião da sua recommendação."></textarea>
       <div class="col-lg-12" style="text-align: right; margin-top: 10px;">
         <button (click)="save()" class="adicionar">Adicionar</button>
       </div>
