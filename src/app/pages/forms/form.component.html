@@ -1,19 +1,21 @@
 <h1>Adicionar uma Recomendação</h1>
+<hr>
 
 <div id="formulario">
-  <div class="conteudo">
   <h2> Adicione uma Recomendação</h2>
-  <hr>
-  <h3>Qual é o nome dessa recomendação?</h3>
-  <input type="text" placeholder="Coloque o nome">
-  <h3>Qual é tipo dessa recomendação</h3>
-  <input type="text" placeholder="Coloque o tipo">
-  <h3>Coloque a descrição dessa recomendação</h3>
-  <input type="text" placeholder="Coloque uma descrição">
-  <h3>Coloque uma imagem da sua recomendação</h3>
-  <input type="text" placeholder="Coloque uma imagem">
-    <div class="col-lg-12" style="text-align: right; margin-top: 10px;">
-    <button class="btn btn-info" style="text-align: right;">Adicionar</button>
+  <div class="conteudo">
+      <form [formGroup]="form">
+      <h3>Nome</h3>
+      <input type="text" formControlName="title" placeholder="Nome">
+      <h3>Tipo</h3>
+      <input type="text" formControlName="kind" placeholder="Tipo">
+      <h3>Descrição</h3>
+      <input type="text" formControlName="description" placeholder="Descrição">
+      <h3>Imagem Url</h3>
+      <input type="text" formControlName="imageUrl"  placeholder="Imagem Url">
+      <div class="col-lg-12" style="text-align: right; margin-top: 10px;">
+        <button class="adicionar">Adicionar</button>
+      </div>
+      </form>
     </div>
-  </div>
 </div>

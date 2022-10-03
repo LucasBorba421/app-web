@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent {
+  public form: FormGroup = new FormGroup({
+    title: new FormControl('', [Validators.required]),
+    kind: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required]),
+    imageUrl: new FormControl('', [Validators.required]),
+  })
 
+  public save(): void {
+    if (this.form.valid) {
+      console.log(this.form.valid)
+    } else {
+      alert('Formulário Inválido')
+    }
+  }
 }
