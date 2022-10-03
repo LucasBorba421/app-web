@@ -16,7 +16,7 @@ export class FormComponent {
 
   public save(): void {
     if (this.form.valid) {
-      console.log(this.form.valid)
+      console.log(this.form.value)
     } else {
       alert('Formulário Inválido')
     }
