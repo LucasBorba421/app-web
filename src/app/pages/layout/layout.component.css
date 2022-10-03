@@ -1,4 +1,17 @@
-.navbar-item, .nav-link {
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
+
+body {
+  background-color: black;
+}
+
+.navbar-item {
+  font-family: 'Ceviche One', cursive;
+  font-size: 20px;
+  color: #F57F1D;
+  text-decoration: none;
+}
+
+.nav-link {
   color: #F57F1D;
   text-decoration: none;
 }
