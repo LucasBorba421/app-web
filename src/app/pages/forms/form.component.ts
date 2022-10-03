@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RecommendationModel } from '../../models/recommendation.model';
-import { dataset } from '../../data/recommendations';
+import { CategoryModel } from '../../models/category.model';
+
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -9,17 +11,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit{
-  public recommendations: RecommendationModel[] = dataset;
+ constructor( private httpClient: HttpClient, private router: Router){}
 
-  public kinds: string[] = []
+  public categories: CategoryModel[] = []
 
-  ngOnInit(): void {
-    dataset.forEach((item) => {
-      if (!this.kinds.includes(item.kind)){
-        this.kinds.push(item.kind);
-      }
-    })
-  }
 
   public form: FormGroup = new FormGroup({
     title: new FormControl('', [Validators.required]),
@@ -28,7 +23,13 @@ export class FormComponent implements OnInit{
     imageUrl: new FormControl('', [Validators.required]),
   })
 
+  
+  public ngOnInit(): void {
+    this.loadCategories();
+  }
+
   public save(): void {
+
     if (this.form.valid) {
       console.log(this.form.value)
     } else {
