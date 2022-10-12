@@ -13,12 +13,12 @@ import { Router } from '@angular/router';
 export class FormComponent implements OnInit{
  constructor( private httpClient: HttpClient, private router: Router){}
 
-  public categories: CategoryModel[] = [];
+  public categories?: CategoryModel[] = [];
   public form: FormGroup = new FormGroup({
     title: new FormControl('', [Validators.required]),
-    kind: new FormControl('', [Validators.required]),
+    category_id: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
-    imageUrl: new FormControl('', [Validators.required]),
+    image_url: new FormControl('', [Validators.required]),
   })
 
   
@@ -43,7 +43,7 @@ export class FormComponent implements OnInit{
   private loadCategories(): void {
     const url = 'https://jp-recommendations-api.herokuapp.com/categories';
     this.httpClient.get<CategoryModel[]>(url).toPromise().then((data) => {
-        //this.categories = data;
+        this.categories = data;
       });
   }
 }

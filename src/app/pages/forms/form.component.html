@@ -8,10 +8,10 @@
       <h3>Nome</h3>
       <input type="text" formControlName="title" placeholder="Nome">
       <h3>Link da Imagem</h3>
-      <input type="text" formControlName="imageUrl"  placeholder="Link da Imagem">
+      <input type="text" formControlName="image_url"  placeholder="Link da Imagem">
       <h3>Categoria</h3>
-        <select id="category" formControlName="kind" type="text" class="form-control">
-          <option value="{{kind}}" *ngFor="let kind of kinds">{{kind}}</option>
+        <select id="category" formControlName="category_id" type="text" class="form-control">
+          <option value="{{category.id}}" *ngFor="let kind of kinds">{{category.name}}</option>
         </select>
         <h3>Descrição</h3>
       <textarea id="description" formControlName="description" placeholder="Faça uma descrião da sua recommendação."></textarea>
