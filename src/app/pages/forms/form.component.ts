@@ -43,7 +43,7 @@ export class FormComponent implements OnInit{
   private loadCategories(): void {
     const url = 'https://jp-recommendations-api.herokuapp.com/categories';
     this.httpClient.get<CategoryModel[]>(url).toPromise().then((data) => {
-        this.categories = data;
+        //this.categories = data;
       });
   }
 }
